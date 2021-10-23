@@ -24,8 +24,8 @@ console.log('poseNet is intialized.')
 function gotPoses(results){
     if(results.length > 0){
         console.log(results);
-        noseX= results[0].pose.nose.x;
-        noseY=results[0].pose.nose.y;
+        noseX= results[0].pose.nose.x-190;
+        noseY=results[0].pose.nose.y-130;
         console.log("nose x = "+noseX);
         console.log("nose y = "+noseY);
     }
@@ -37,7 +37,7 @@ image(video, 0, 0, 300, 300);
 //fill(255,0,0);
 //stroke(255,0,0);
 //circle(noseX, noseY, 20);
-image(clown_nose, noseX, noseY, 30, 30);
+image(clown_nose, noseX, noseY, 20, 20);
 
 }
 
